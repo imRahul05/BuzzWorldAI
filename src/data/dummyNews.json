@@ -1,0 +1,114 @@
+{
+  "articles": [
+    {
+      "id": "news-1",
+      "title": "Water Shortages Affect JP Nagar Residents",
+      "description": "Residents of JP Nagar have been experiencing intermittent water supply issues for the past week. The local municipal corporation has attributed this to maintenance work on the main supply line.",
+      "content": "<p>BANGALORE, July 1, 2025 - Residents of JP Nagar have been experiencing intermittent water supply issues for the past week, causing significant inconvenience to households and businesses in the area.</p><p>The Bangalore Water Supply and Sewerage Board (BWSSB) has attributed these shortages to essential maintenance work being carried out on the main supply line that services the neighborhood.</p><p>\"We understand the difficulties faced by residents and are working round the clock to complete the maintenance work,\" said a BWSSB spokesperson. \"We expect normal water supply to resume by the end of the week.\"</p><p>Many residents have expressed frustration over the lack of prior notice. \"They should have at least informed us before starting such major work,\" said Priya Sharma, a long-time resident of 3rd Phase. \"We've had to purchase water tankers at additional cost.\"</p><p>Some community members have organized water-sharing initiatives to help elderly residents and those facing severe shortages. Local corporator Rajesh Kumar has promised to set up temporary water distribution points in the most affected areas until the issue is resolved.</p>",
+      "publishedAt": "2025-07-01T08:30:00Z",
+      "author": "Deepak Menon",
+      "urlToImage": "https://source.unsplash.com/random/1200x800?water,shortage",
+      "location": "JP Nagar",
+      "tags": ["JP Nagar", "Infrastructure", "Water Supply"]
+    },
+    {
+      "id": "news-2",
+      "title": "New Park Opens in Indiranagar",
+      "description": "A new community park has been inaugurated in Indiranagar 2nd Stage, featuring walking tracks, children's play areas, and dedicated spaces for senior citizens.",
+      "content": "<p>BANGALORE, July 2, 2025 - Indiranagar residents welcomed the opening of a new community park in 2nd Stage today, a project that has been in development for over eight months.</p><p>The 2-acre park features landscaped gardens, walking tracks, children's play areas, and dedicated spaces for senior citizens. The park also includes fitness equipment, a small amphitheater for community events, and sustainable features like rainwater harvesting systems.</p><p>\"This park transforms an unused plot that had become a garbage dumping site into a beautiful green space for everyone to enjoy,\" said Maya Patel, a member of the Resident Welfare Association that had been advocating for the project.</p><p>The park was inaugurated by local MLA Shanthi Reddy, who emphasized the importance of green spaces in urban areas. \"With increasing density of buildings, such lung spaces are essential for community wellbeing and environmental health,\" she stated.</p><p>The park will be open daily from 5:00 AM to 9:00 PM, with security personnel and maintenance staff assigned by the BBMP. Regular community events including yoga classes and gardening workshops are already being planned by local volunteers.</p>",
+      "publishedAt": "2025-07-02T10:15:00Z",
+      "author": "Ananya Singh",
+      "urlToImage": "https://source.unsplash.com/random/1200x800?park,community",
+      "location": "Indiranagar",
+      "tags": ["Indiranagar", "Community", "Infrastructure"]
+    },
+    {
+      "id": "news-3",
+      "title": "Traffic Signal Malfunction at Koramangala Junction",
+      "description": "The traffic signal at the busy Sony World Junction in Koramangala has been malfunctioning for three days, causing significant traffic congestion during peak hours.",
+      "content": "<p>BANGALORE, June 30, 2025 - Commuters in Koramangala are facing extended travel times as the traffic signal at the busy Sony World Junction has been malfunctioning for three days.</p><p>The intersection, which connects 80 Feet Road, 100 Feet Road, and Inner Ring Road, is one of the busiest junctions in the area. The signal malfunction has led to chaotic traffic conditions, particularly during morning and evening peak hours.</p><p>Traffic police personnel have been manually managing the flow, but commuters report delays of 15-20 minutes when crossing the junction.</p><p>\"I've been late to work every day this week because of this issue,\" said Rahul Mehta, who commutes daily from HSR Layout to his office in Indiranagar. \"Even with traffic police present, the congestion is terrible.\"</p><p>According to a statement from the Traffic Management Centre, the malfunction is due to an electrical issue that has affected the signal's control box. \"We've identified the problem and replacement parts have been ordered. The signal should be functioning normally within 48 hours,\" said ACP Traffic (East) Malini Krishnamurthy.</p><p>Commuters are advised to plan alternate routes if possible until repairs are completed.</p>",
+      "publishedAt": "2025-06-30T17:45:00Z",
+      "author": "Karthik Rao",
+      "urlToImage": "https://source.unsplash.com/random/1200x800?traffic,junction",
+      "location": "Koramangala",
+      "tags": ["Koramangala", "Traffic", "Infrastructure"]
+    },
+    {
+      "id": "news-4",
+      "title": "Weekend Farmers Market Sets New Attendance Record in Whitefield",
+      "description": "The monthly farmers market in Whitefield saw its highest attendance yet, with over 5,000 visitors supporting local farmers and artisans.",
+      "content": "<p>BANGALORE, July 3, 2025 - The monthly farmers market held at the Whitefield Community Center last weekend set a new attendance record with over 5,000 visitors throughout the day.</p><p>The market, which features produce directly from local farmers and products from artisans, has been growing in popularity since its inception eight months ago. This month's event featured 45 stalls offering organic vegetables, fruits, handmade crafts, baked goods, and prepared foods.</p><p>\"We're thrilled with the response from the community,\" said Meena Iyer, organizer and founder of Whitefield Sustainable Living Collective. \"Our goal has always been to connect local producers directly with consumers, and the growing attendance shows there's a real demand for this kind of marketplace.\"</p><p>Farmers reported selling out of popular items by early afternoon. Ravi Kumar, who brings organic vegetables from his farm in Hoskote, said, \"This is our best market day yet. We sold three times what we normally do, and we've made valuable connections with local restaurants who want to source directly from us.\"</p><p>The market also featured workshops on composting and urban gardening, as well as activities for children.</p><p>Given the success, organizers are considering increasing the frequency to twice monthly. The next market is scheduled for August 7th.</p>",
+      "publishedAt": "2025-07-03T09:00:00Z",
+      "author": "Divya Sharma",
+      "urlToImage": "https://source.unsplash.com/random/1200x800?farmers,market",
+      "location": "Whitefield",
+      "tags": ["Whitefield", "Community", "Events"]
+    },
+    {
+      "id": "news-5",
+      "title": "Tech Park Expansion to Create 3,000 New Jobs in Electronic City",
+      "description": "Horizon Tech Park in Electronic City has announced a major expansion that will add 5 lakh sq ft of office space and create approximately 3,000 new jobs over the next two years.",
+      "content": "<p>BANGALORE, June 28, 2025 - Horizon Tech Park, one of the largest IT campuses in Electronic City, has announced a major expansion project that will significantly increase its capacity and create new employment opportunities in the area.</p><p>The ₹450 crore project will add two new towers with a combined 5 lakh square feet of office space. Construction is scheduled to begin next month, with completion expected by late 2027.</p><p>\"This expansion reflects our confidence in Bangalore's continued growth as a global tech hub,\" said Naveen Reddy, CEO of Horizon Properties. \"The new facilities will incorporate state-of-the-art sustainable design features and create an optimal work environment for the modern tech workforce.\"</p><p>The expansion is expected to create approximately 3,000 new jobs once completed, with several major tech companies already in talks to lease space in the new towers. Additionally, the construction phase will employ around 800 workers.</p><p>Local business owners have welcomed the announcement. \"More offices mean more customers for restaurants, shops, and services in the area,\" said Lakshmi Nair, who runs a popular café near the tech park. \"This will definitely boost the local economy.\"</p><p>The project will also include improvements to surrounding infrastructure, including road widening and a new skyway connecting to the main highway.</p>",
+      "publishedAt": "2025-06-28T11:20:00Z",
+      "author": "Sameer Joshi",
+      "urlToImage": "https://source.unsplash.com/random/1200x800?techpark,office",
+      "location": "Electronic City",
+      "tags": ["Electronic City", "Business", "Infrastructure"]
+    },
+    {
+      "id": "news-6",
+      "title": "Community Cleanup Drive Planned for Koramangala Lake",
+      "description": "Residents of Koramangala are organizing a community cleanup drive this Sunday to remove plastic waste and revitalize the area around the local lake.",
+      "content": "<p>BANGALORE, July 2, 2025 - Concerned about increasing pollution, residents of Koramangala have organized a community cleanup drive focusing on the lake area this coming Sunday.</p><p>The initiative, led by the Koramangala Residents' Welfare Association in partnership with local environmental groups, aims to remove plastic waste and invasive plants that have been affecting the lake ecosystem.</p><p>\"What started as a small idea in our residents' WhatsApp group has grown into a full-fledged community event,\" explained Sanjay Menon, one of the organizers. \"We've already got over 200 volunteers signed up, including many school children and senior citizens.\"</p><p>Local businesses have also stepped up to support the initiative. Cafés and restaurants in the area will provide refreshments for volunteers, while waste management startups are donating equipment and helping with proper segregation and disposal of collected waste.</p><p>The organizers hope this will become a monthly event and lead to more permanent solutions for maintaining the lake's health. \"This isn't just about one day of cleaning,\" said environmental activist Nandini Sharma. \"We want to create awareness about the importance of urban water bodies and build a sense of ownership within the community.\"</p><p>The cleanup drive will take place from 7:00 AM to 11:00 AM on Sunday, July 6th. Interested volunteers are asked to bring their own water bottles and gloves.</p>",
+      "publishedAt": "2025-07-02T14:50:00Z",
+      "author": "Rohan Kumar",
+      "urlToImage": "https://source.unsplash.com/random/1200x800?lake,cleanup",
+      "location": "Koramangala",
+      "tags": ["Koramangala", "Environment", "Community"]
+    },
+    {
+      "id": "news-7",
+      "title": "New Metro Line to Connect JP Nagar to Airport",
+      "description": "The Bangalore Metro Rail Corporation has announced plans for a new metro line that will connect JP Nagar to Kempegowda International Airport, significantly reducing travel time for south Bangalore residents.",
+      "content": "<p>BANGALORE, June 29, 2025 - In a significant development for public transportation in the city, the Bangalore Metro Rail Corporation (BMRC) has announced plans for a new metro line that will connect JP Nagar directly to Kempegowda International Airport.</p><p>The proposed 29-kilometer line will have 18 stations and is expected to reduce travel time from south Bangalore to the airport from the current 2+ hours by road to approximately 45 minutes.</p><p>\"This new line addresses a critical connectivity gap in our public transport network,\" said BMRC Managing Director Suresh Kumar during the announcement. \"It will not only benefit airport travelers but also thousands of people who work in the northern parts of the city.\"</p><p>The project, estimated to cost ₹14,500 crore, will be developed under a public-private partnership model. Construction is expected to begin in early 2026, with completion targeted for 2031.</p><p>The announcement has been welcomed by residents of south Bangalore. \"This is great news for those of us who travel frequently,\" said Anjali Reddy, a JP Nagar resident who works for an international company. \"The airport commute has always been a major pain point.\"</p><p>Public consultations regarding station locations and route alignment will begin next month, with details to be published on the BMRC website.</p>",
+      "publishedAt": "2025-06-29T13:15:00Z",
+      "author": "Vikram Singh",
+      "urlToImage": "https://source.unsplash.com/random/1200x800?metro,train",
+      "location": "JP Nagar",
+      "tags": ["JP Nagar", "Infrastructure", "Transportation"]
+    },
+    {
+      "id": "news-8",
+      "title": "Local School in Indiranagar Wins National Science Competition",
+      "description": "Students from Horizon Public School in Indiranagar have won the National Science Innovation Challenge with their project on urban water conservation.",
+      "content": "<p>BANGALORE, July 1, 2025 - A team of students from Horizon Public School in Indiranagar has brought national recognition to their institution by winning the prestigious National Science Innovation Challenge held in New Delhi last week.</p><p>The team of five students from grades 9 and 10 impressed the judges with their project titled \"Integrated Rainwater Harvesting System for Urban Apartments,\" which presented an innovative and cost-effective solution for water conservation in city dwellings.</p><p>\"What made their project stand out was the practical implementation and data they collected from real-world testing in their school and residential complexes in Indiranagar,\" said Dr. Rajiv Menon, one of the competition judges and a professor at IISc Bangalore.</p><p>The winning design combines traditional rainwater harvesting with a modern filtration system and smart monitoring to maximize water collection and usage. The students developed a working prototype that was installed in their school, resulting in 40% reduction in external water consumption for gardening and cleaning purposes.</p><p>\"We were inspired by the water shortages we've experienced in our own neighborhood,\" said team leader Aditya Sharma. \"Our goal was to create something that any apartment complex could implement without major structural changes.\"</p><p>The team will now represent India at the International Youth Science Congress in Singapore later this year.</p>",
+      "publishedAt": "2025-07-01T16:45:00Z",
+      "author": "Meera Nair",
+      "urlToImage": "https://source.unsplash.com/random/1200x800?students,science",
+      "location": "Indiranagar",
+      "tags": ["Indiranagar", "Education", "Environment"]
+    },
+    {
+      "id": "news-9",
+      "title": "New Pedestrian-Only Zone Planned for Whitefield Main Road",
+      "description": "A 500-meter stretch of Whitefield Main Road will be converted into a pedestrian-only zone on weekends, starting from August, as part of a new urban mobility initiative.",
+      "content": "<p>BANGALORE, July 3, 2025 - In a move to promote walking and reduce vehicle congestion, the BBMP has announced that a 500-meter stretch of Whitefield Main Road will be designated as a pedestrian-only zone on weekends, starting next month.</p><p>The initiative will see the road section between Forum Neighbourhood Mall and Whitefield Club closed to vehicles from 4:00 PM Saturday to 10:00 PM Sunday every weekend. The area will be transformed into a vibrant public space with seating areas, pop-up stores, street performances, and food stalls.</p><p>\"This is part of our broader strategy to reclaim urban spaces for people rather than vehicles,\" explained BBMP Commissioner Anitha Krishnan. \"Similar initiatives in cities worldwide have shown tremendous benefits for both local businesses and community life.\"</p><p>The plan has received mixed reactions from locals. Many residents have welcomed the opportunity for a safe, car-free area for families and pedestrians. \"It will be wonderful to have a space where kids can move around freely without worry about traffic,\" said Rajesh Menon, father of two young children.</p><p>However, some business owners and residents have expressed concerns about access and parking. \"While I support the concept, we need proper planning for alternative routes and sufficient parking near the entry points,\" said Pradeep Kumar, who owns a retail store on the affected stretch.</p><p>The BBMP has stated that additional parking spaces will be created near both ends of the pedestrian zone, and clear signage will direct traffic to alternative routes.</p><p>If successful, the initiative may be extended to other commercial areas in the city.</p>",
+      "publishedAt": "2025-07-03T12:30:00Z",
+      "author": "Lakshmi Iyer",
+      "urlToImage": "https://source.unsplash.com/random/1200x800?pedestrian,street",
+      "location": "Whitefield",
+      "tags": ["Whitefield", "Urban Planning", "Transportation"]
+    },
+    {
+      "id": "news-10",
+      "title": "Electronic City to Get New Specialty Healthcare Center",
+      "description": "A 150-bed multi-specialty healthcare center will open in Electronic City Phase 2 next month, offering advanced medical services to residents and tech workers in the area.",
+      "content": "<p>BANGALORE, June 30, 2025 - Residents of Electronic City will soon have access to advanced healthcare facilities closer to home with the opening of a new 150-bed multi-specialty medical center in Phase 2.</p><p>The ₹250 crore facility, developed by Wellness Healthcare Group, will offer specialized departments including cardiology, orthopedics, neurology, and a comprehensive diagnostic center equipped with the latest medical technology.</p><p>\"This center addresses the growing healthcare needs of the rapidly expanding population in and around Electronic City,\" said Dr. Anil Kumar, Medical Director of the new facility. \"Until now, residents had to travel significant distances to reach tertiary care hospitals, which can be critical in emergency situations.\"</p><p>The hospital will also feature a 24-hour emergency department, trauma care, and ambulance services. A special corporate health program has been designed for the thousands of tech professionals working in the nearby IT parks.</p><p>\"With over 200,000 people working in Electronic City and many now choosing to live nearby, having quality healthcare infrastructure is essential,\" noted Venkat Rao, President of the Electronic City Industries Association, which had been advocating for improved healthcare facilities in the area.</p><p>The hospital is expected to create approximately 500 jobs, including medical, paramedical, and administrative positions. It will officially open on August 15th, with a free health check-up camp planned for the inauguration week.</p>",
+      "publishedAt": "2025-06-30T09:10:00Z",
+      "author": "Priya Varma",
+      "urlToImage": "https://source.unsplash.com/random/1200x800?hospital,healthcare",
+      "location": "Electronic City",
+      "tags": ["Electronic City", "Healthcare", "Infrastructure"]
+    }
+  ]
+}
