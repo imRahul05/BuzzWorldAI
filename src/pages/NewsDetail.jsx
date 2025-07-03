@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
+
 import { searchNews } from '../utils/newsAPI';
 
 const NewsDetail = () => {
@@ -13,19 +13,14 @@ const NewsDetail = () => {
     const fetchArticle = async () => {
       setIsLoading(true);
       try {
-        // Since NewsAPI doesn't provide a direct endpoint to fetch a specific article by ID,
-        // we'll need to check if the ID is a URL (from NewsAPI) or our own generated ID
-        const apiKey = '6144067bfae64c9ab2bdd7446931f9e5';
+        const apiKey = import.meta.env.VITE_NEWS_API_KEY;
         
-        // For NewsAPI URLs, we can search for the specific article
-        // and use sessionStorage to try to retrieve the article if it was viewed from the home page
         let foundArticle = null;
         const cachedArticle = sessionStorage.getItem(`article-${id}`);
         
         if (cachedArticle) {
           foundArticle = JSON.parse(cachedArticle);
         } else if (id.startsWith('http')) {
-          // If the ID is a URL, try to fetch using the URL as a search term
           const encodedUrl = encodeURIComponent(id);
           const apiUrl = `https://newsapi.org/v2/everything?q=${encodedUrl}&apiKey=${apiKey}&pageSize=1`;
           
@@ -43,17 +38,14 @@ const NewsDetail = () => {
             foundArticle.id = id;
           }
         } else {
-          // If we still don't have an article, try to search for something related
           const apiUrl = `https://newsapi.org/v2/everything?q=local+news+bangalore&apiKey=${apiKey}&pageSize=10`;
           
           const response = await fetch(apiUrl);
           if (response.ok) {
             const data = await response.json();
             if (data.articles && data.articles.length > 0) {
-              // Get a random article from the results
               const randomIndex = Math.floor(Math.random() * data.articles.length);
               foundArticle = data.articles[randomIndex];
-              // Add location and tags
               foundArticle.location = determineLocation(foundArticle);
               foundArticle.tags = generateTagsFromContent(foundArticle);
               foundArticle.id = id;
@@ -64,7 +56,6 @@ const NewsDetail = () => {
         if (foundArticle) {
           setArticle(foundArticle);
           
-          // Fetch related articles based on keywords from the article
           const keywords = extractKeywords(foundArticle);
           const relatedApiUrl = `https://newsapi.org/v2/everything?q=${encodeURIComponent(keywords.join(' OR '))}&apiKey=${apiKey}&pageSize=3&language=en`;
           
@@ -85,7 +76,6 @@ const NewsDetail = () => {
             setRelatedNews(generateRelatedNews(foundArticle));
           }
         } else {
-          // If we still can't find the article, generate a dummy one
           const dummyArticle = generateDummyArticle(id);
           setArticle(dummyArticle);
           setRelatedNews(generateRelatedNews(dummyArticle));
@@ -94,7 +84,6 @@ const NewsDetail = () => {
         console.error('Error fetching article:', err);
         setError('Failed to load the article. Please try again later.');
         
-        // Fallback to dummy article
         const dummyArticle = generateDummyArticle(id);
         setArticle(dummyArticle);
         setRelatedNews(generateRelatedNews(dummyArticle));
@@ -103,11 +92,9 @@ const NewsDetail = () => {
       }
     };
     
-    // Function to determine location from article content
     const determineLocation = (article) => {
       const locations = ['Koramangala', 'Indiranagar', 'JP Nagar', 'Whitefield', 'Electronic City'];
       
-      // Search for location mentions in title or description
       const content = `${article.title || ''} ${article.description || ''}`.toLowerCase();
       
       for (const loc of locations) {
@@ -116,15 +103,13 @@ const NewsDetail = () => {
         }
       }
       
-      return 'Bangalore'; // Default location
+      return 'Bangalore';
     };
     
-    // Function to generate tags from article content
     const generateTagsFromContent = (article) => {
       const tags = [];
       const content = `${article.title || ''} ${article.description || ''}`.toLowerCase();
       
-      // Check for common categories
       const categories = [
         'Technology', 'Business', 'Health', 'Environment', 
         'Politics', 'Sports', 'Entertainment', 'Education'
@@ -136,7 +121,6 @@ const NewsDetail = () => {
         }
       });
       
-      // Add a location tag if found
       const locations = ['Koramangala', 'Indiranagar', 'JP Nagar', 'Whitefield', 'Electronic City', 'Bangalore'];
       locations.forEach(loc => {
         if (content.includes(loc.toLowerCase())) {
@@ -144,7 +128,6 @@ const NewsDetail = () => {
         }
       });
       
-      // If no tags were found, add a default
       if (tags.length === 0) {
         tags.push('Local News');
       }
@@ -152,27 +135,22 @@ const NewsDetail = () => {
       return tags;
     };
     
-    // Extract keywords for related content search
     const extractKeywords = (article) => {
       const keywords = [];
       
-      // Add location if available
       if (article.location) {
         keywords.push(article.location);
       }
       
-      // Add main topic from title (removing common words)
       const title = article.title || '';
       const words = title.split(' ')
-        .filter(word => word.length > 4) // Only longer words
+        .filter(word => word.length > 4) 
         .filter(word => !['about', 'after', 'again', 'along', 'could', 'every', 'from', 'their', 'there', 'these', 'those', 'what', 'when', 'where', 'which', 'would'].includes(word.toLowerCase()));
       
-      // Add some unique words from the title
       if (words.length > 0) {
         keywords.push(...words.slice(0, 3));
       }
       
-      // Add "Bangalore" and "news" as fallbacks
       keywords.push('Bangalore', 'news');
       
       return keywords.filter((item, index, self) => self.indexOf(item) === index); // Remove duplicates
@@ -181,7 +159,6 @@ const NewsDetail = () => {
     fetchArticle();
   }, [id]);
   
-  // Generate a dummy article with the given ID
   const generateDummyArticle = (articleId) => {
     const locations = ['Koramangala', 'Indiranagar', 'JP Nagar', 'Whitefield', 'Electronic City'];
     const location = locations[Math.floor(Math.random() * locations.length)];
@@ -213,13 +190,11 @@ const NewsDetail = () => {
     };
   };
   
-  // Generate related news based on an article
   const generateRelatedNews = (baseArticle) => {
     const relatedArticles = [];
     const location = baseArticle.location;
     const tags = baseArticle.tags || [];
     
-    // Generate 3 related articles
     for (let i = 0; i < 3; i++) {
       relatedArticles.push({
         id: `related-${baseArticle.id}-${i}`,
@@ -235,7 +210,6 @@ const NewsDetail = () => {
     return relatedArticles;
   };
   
-  // Format the published date
   const formatDate = (dateString) => {
     if (!dateString) return '';
     const options = { 
@@ -249,13 +223,10 @@ const NewsDetail = () => {
     return new Date(dateString).toLocaleDateString('en-US', options);
   };
 
-  // Handle "Ask AI about this" button click
   const handleAskAI = () => {
-    // Store the article in sessionStorage so it can be accessed in the AIChat component
     if (article) {
       sessionStorage.setItem('current-article-for-ai', JSON.stringify(article));
       
-      // Navigate to AI Chat page
       window.location.href = '/ai-chat?source=article';
     }
   };

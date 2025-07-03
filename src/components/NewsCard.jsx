@@ -2,10 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const NewsCard = ({ article, index }) => {
-  // Generate a dummy ID if none exists
   const articleId = article.id || `article-${index}`;
   
-  // Format the published date
+
   const formattedDate = article.publishedAt 
     ? new Date(article.publishedAt).toLocaleDateString('en-US', { 
         month: 'short', 
@@ -16,7 +15,6 @@ const NewsCard = ({ article, index }) => {
       }) 
     : 'Recent';
 
-  // Extract tags from article (if available) or generate dummy tags
   const tags = article.tags || ['Local', 'News'];
 
   return (
@@ -25,7 +23,6 @@ const NewsCard = ({ article, index }) => {
         to={`/news/${articleId}`} 
         className="block"
         onClick={() => {
-          // Save the article to sessionStorage to retrieve it on the detail page
           sessionStorage.setItem(`article-${articleId}`, JSON.stringify(article));
         }}
       >
@@ -65,7 +62,6 @@ const NewsCard = ({ article, index }) => {
           className="flex items-center text-sm text-blue-600 hover:text-blue-800"
           onClick={(e) => {
             e.preventDefault();
-            // Save the article in sessionStorage and redirect to AI chat
             sessionStorage.setItem('current-article-for-ai', JSON.stringify(article));
             window.location.href = '/ai-chat?source=article';
           }}

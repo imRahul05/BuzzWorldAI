@@ -59,11 +59,9 @@ const About = () => {
         
         <div className="mt-6 text-center">
           <p className="text-gray-500 text-sm">
-            BuzzWorld AI - Prototype Version 0.1 - Created July 2025
+            BuzzWorld AI 
           </p>
-          <p className="text-gray-500 text-sm">
-            This is a demonstration prototype. In a production application, data would be stored securely and AI would be connected to live news sources.
-          </p>
+         
         </div>
       </div>
     </div>

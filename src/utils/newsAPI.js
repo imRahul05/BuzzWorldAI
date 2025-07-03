@@ -64,12 +64,39 @@ export const searchNews = async (keyword, pageSize = 20) => {
 };
 
 /**
- * Fetches top headlines for India
+ * Fetches top headlines for India with local news focus
  * @param {number} pageSize - Number of articles to fetch
  * @returns {Promise<Array>} - Array of news articles
  */
 export const fetchTopHeadlines = async (pageSize = 20) => {
   try {
+    // First try to get India-focused local news
+    try {
+      const localResponse = await axios.get(`${BASE_URL}/everything`, {
+        params: {
+          q: 'India local news Bangalore',
+          apiKey: NEWS_API_KEY,
+          pageSize: pageSize,
+          language: 'en',
+          sortBy: 'publishedAt'
+        }
+      });
+      
+      if (localResponse.data.articles && localResponse.data.articles.length > 0) {
+        console.log('Found local India news:', localResponse.data.articles.length);
+        return localResponse.data.articles.map(article => ({
+          ...article,
+          id: article.url,
+          location: determineLocation(article, 'Bangalore'),
+          tags: generateTagsFromContent(article)
+        }));
+      }
+    } catch (localError) {
+      console.error('Error fetching local India news:', localError);
+      // Continue to fallback
+    }
+    
+    // Fall back to top headlines if local search fails
     const response = await axios.get(`${BASE_URL}/top-headlines`, {
       params: {
         country: 'in',

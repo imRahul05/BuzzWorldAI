@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal';
 
-// Ensure Modal is accessible
 Modal.setAppElement('#root');
 
 const CreatePostModal = ({ isOpen, onClose, onSubmit, locations = [] }) => {
@@ -13,7 +12,6 @@ const CreatePostModal = ({ isOpen, onClose, onSubmit, locations = [] }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     
-    // Form validation
     if (!title.trim()) {
       setError('Please enter a title');
       return;
@@ -29,7 +27,6 @@ const CreatePostModal = ({ isOpen, onClose, onSubmit, locations = [] }) => {
       return;
     }
     
-    // Create post object
     const newPost = {
       id: `post-${Date.now()}`,
       title,
@@ -39,7 +36,6 @@ const CreatePostModal = ({ isOpen, onClose, onSubmit, locations = [] }) => {
       replies: []
     };
     
-    // Submit post and close modal
     onSubmit(newPost);
     resetForm();
     onClose();

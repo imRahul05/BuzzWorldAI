@@ -11,14 +11,12 @@ const Discussion = () => {
   
   const locations = ['All Locations', 'Koramangala', 'Indiranagar', 'JP Nagar', 'Whitefield', 'Electronic City'];
 
-  // Load posts from localStorage on component mount
   useEffect(() => {
     setIsLoading(true);
     const storedPosts = localStorage.getItem('buzzworld_posts');
     if (storedPosts) {
       setPosts(JSON.parse(storedPosts));
     } else {
-      // If no posts exist, create dummy posts
       const dummyPosts = generateDummyPosts();
       setPosts(dummyPosts);
       localStorage.setItem('buzzworld_posts', JSON.stringify(dummyPosts));
@@ -26,7 +24,6 @@ const Discussion = () => {
     setIsLoading(false);
   }, []);
 
-  // Generate dummy posts if none exist
   const generateDummyPosts = () => {
     const dummyPosts = [];
     const topics = [
@@ -58,7 +55,6 @@ const Discussion = () => {
     return dummyPosts;
   };
   
-  // Generate dummy replies for posts
   const generateDummyReplies = (count) => {
     const replies = [];
     const replyMessages = [
@@ -81,21 +77,17 @@ const Discussion = () => {
     return replies;
   };
 
-  // Filter posts based on selected location
   const filteredPosts = posts.filter(post => {
     return selectedLocation === 'All Locations' || post.location === selectedLocation;
   });
 
-  // Handle creating a new post
   const handleCreatePost = (newPost) => {
     const updatedPosts = [newPost, ...posts];
     setPosts(updatedPosts);
     localStorage.setItem('buzzworld_posts', JSON.stringify(updatedPosts));
   };
 
-  // Handle replying to a post
   const handleReply = (postId) => {
-    // For now, just prompt the user for a reply
     const replyMessage = prompt('Enter your reply:');
     if (replyMessage && replyMessage.trim()) {
       const updatedPosts = posts.map(post => {
@@ -173,7 +165,7 @@ const Discussion = () => {
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
         onSubmit={handleCreatePost}
-        locations={locations.slice(1)} // Remove 'All Locations'
+        locations={locations.slice(1)} 
       />
     </div>
   );

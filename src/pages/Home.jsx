@@ -13,7 +13,6 @@ const Home = () => {
   
   const locations = ['All Locations', 'Koramangala', 'Indiranagar', 'JP Nagar', 'Whitefield', 'Electronic City'];
 
-  // Fetch news data based on location
   useEffect(() => {
     const getNews = async () => {
       setIsLoading(true);
@@ -21,10 +20,8 @@ const Home = () => {
         let articles = [];
         
         if (selectedLocation === 'All Locations') {
-          // If no specific location is selected, get top headlines for India
           articles = await fetchTopHeadlines();
         } else {
-          // Otherwise get news for the selected location
           articles = await fetchNewsByLocation(selectedLocation);
         }
         
@@ -33,7 +30,6 @@ const Home = () => {
         console.error('Error fetching news:', err);
         setError('Failed to load news. Please try again later.');
         
-        // Fallback to dummy data if fetch fails
         setNews(generateDummyNews());
       } finally {
         setIsLoading(false);
@@ -43,7 +39,6 @@ const Home = () => {
     getNews();
   }, [selectedLocation]);
 
-  // Filter news based on search query and location
   const filteredNews = news.filter(article => {
     const matchesSearch = searchQuery === '' || 
       (article.title && article.title.toLowerCase().includes(searchQuery.toLowerCase())) || 
@@ -52,20 +47,29 @@ const Home = () => {
     const matchesLocation = selectedLocation === 'All Locations' || 
       (article.location && article.location === selectedLocation);
     
-    return matchesSearch && matchesLocation;
+    return matchesSearch && (selectedLocation === 'All Locations' || matchesLocation);
   });
 
-  // Handle refresh action
-  const handleRefresh = () => {
+  const handleRefresh = async () => {
     setIsLoading(true);
-    // In a real app, this would re-fetch from the API
-    setTimeout(() => {
-      setNews(generateDummyNews());
+    try {
+      let articles = [];
+      
+      if (selectedLocation === 'All Locations') {
+        articles = await fetchTopHeadlines();
+      } else {
+        articles = await fetchNewsByLocation(selectedLocation);
+      }
+      
+      setNews(articles);
+    } catch (err) {
+      console.error('Error refreshing news:', err);
+      setError('Failed to refresh news. Please try again later.');
+    } finally {
       setIsLoading(false);
-    }, 1000);
+    }
   };
 
-  // Generate dummy news if needed
   const generateDummyNews = () => {
     const locations = ['Koramangala', 'Indiranagar', 'JP Nagar', 'Whitefield', 'Electronic City'];
     const dummyNews = [];
